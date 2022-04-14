@@ -1,0 +1,47 @@
+<div class='top-heading'>
+  <h1 class='task-heading'>Task Completion</h1>
+</div>
+
+<h2 class='table-heading'>Users with 50% or more completion</h2>
+
+<table class='task-table'>
+  <thead>
+    <tr>
+      <th>User ID</th>
+      <th>Completed %</th>
+    </tr>
+  </thead>
+  <% @top_users.each do |user| %>
+    <tr>
+      <td><%= user.external_id %></td>
+      <td><%= user.percentage_tasks_complete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<h2 class='table-heading'>Users with less than 50% completion</h2>
+
+<table class='task-table'>
+  <thead>
+    <tr>
+      <th>User ID</th>
+      <th>Completed %</th>
+    </tr>
+  </thead>
+  <% @bottom_users.each do |user| %>
+    <tr>
+      <td><%= user.external_id %></td>
+      <td><%= user.percentage_tasks_complete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<h2 class='table-heading'>View individual tasks (click to view)</h2>
+
+<table class='user-task-table'>
+  <tr>
+    <% @users.each do |user| %>
+        <td><%= link_to "#{user.external_id}", user_tasks_path(id: user.id)  %></td>
+    <% end %>
+  </tr>
+</table>

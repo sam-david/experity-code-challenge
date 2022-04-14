@@ -1,0 +1,47 @@
+.top-heading {
+  width: 100%;
+  background-color: green;
+  color: white;
+}
+.task-heading {
+  text-align: center;
+  font-size: 3em;
+  margin-top: 0;
+}
+
+.table-heading {
+  text-align: center;
+  font-size: 3em;
+}
+
+.task-table {
+  border: solid 2px black;
+  font-size: 2em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.task-table th, .task-table td {
+  border: solid 2px black;
+}
+
+.user-task-table {
+  font-size: 2em;
+  border: solid 2px black;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.user-task-table td {
+  border: solid 1px black;
+}
+
+.home-link-container {
+  margin-top: 3%;
+  text-align: center;
+  margin-bottom: 2%;
+}
+
+.home-link {
+  font-size: 2em;
+}

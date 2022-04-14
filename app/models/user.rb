@@ -13,4 +13,8 @@ class User < ApplicationRecord
       end
     end
   end
+
+  def percentage_tasks_complete
+    tasks.where(completed: true).count * 100 / tasks.count
+  end
 end
