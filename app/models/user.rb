@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_many :tasks
+  validates :external_id, presence: true
 
   def self.update_tasks
     external_tasks = HTTParty.get('https://jsonplaceholder.typicode.com/todos')
