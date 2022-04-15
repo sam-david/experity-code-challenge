@@ -36,10 +36,11 @@
   <% end %>
 </table>
 
-<h2 class='table-heading'>View individual tasks (click to view)</h2>
+<h2 class='table-heading'>View individuals' tasks</h2>
 
 <table class='user-task-table'>
   <tr>
+    <td>User ID:</td>
     <% @users.each do |user| %>
         <td><%= link_to "#{user.external_id}", user_tasks_path(id: user.id)  %></td>
     <% end %>
